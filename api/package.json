@@ -1,0 +1,46 @@
+{
+  "name": "prsonal-finance-api",
+  "version": "0.3.0",
+  "description": "Personal finance API",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node server",
+    "test": "lab -a code -L",
+    "lint": "lab -dL"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devinivy/boilerplate-api"
+  },
+  "author": "Devin Ivy <devin@bigroomstudios.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devinivy/boilerplate-api/issues"
+  },
+  "homepage": "https://github.com/devinivy/boilerplate-api",
+  "dependencies": {
+    "bassmaster": "2.x.x",
+    "boom": "3.x.x",
+    "dogwater": "2.x.x",
+    "glue": "3.x.x",
+    "handlebars": "4.x.x",
+    "hapi": "13.x.x",
+    "hapi-swagger": "6.x.x",
+    "haute-couture": ">=1.1.0 <2",
+    "hoek": "4.x.x",
+    "inert": "4.x.x",
+    "joi": "8.x.x",
+    "labbable": "1.x.x",
+    "node-uuid": "^1.4.7",
+    "poop": "2.x.x",
+    "sails-disk": "0.10.x",
+    "vision": "4.x.x",
+    "waterline": "0.12.x"
+  },
+  "devDependencies": {
+    "code": "3.x.x",
+    "eslint-config-hapi": "9.x.x",
+    "eslint-plugin-hapi": "4.x.x",
+    "lab": "10.x.x"
+  }
+}
