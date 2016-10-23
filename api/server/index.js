@@ -29,5 +29,13 @@ Glue.compose(Manifest, { relativeTo: __dirname }, (err, server) => {
 
             console.log(`Server started at ${server.info.uri}`);
         });
+
+        // TODO: consider a logger plugin like "good"
+        server.on('response', function (request) {
+            console.log(new Date().toLocaleTimeString() +
+                ': ' + request.method.toUpperCase() +
+                ' ' + request.url.path +
+                ' (' + request.response.statusCode + ')');
+        });
     });
 });

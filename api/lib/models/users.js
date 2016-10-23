@@ -1,8 +1,7 @@
-'use strict';
-
 module.exports = {
     identity: 'users',
-    connection:'diskDb',
+    columnName: 'users',
+    connection:'dev',
     attributes: {
         name: {
             type: 'string',

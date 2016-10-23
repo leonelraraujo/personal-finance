@@ -1,8 +1,8 @@
 var uuid = require("node-uuid");
 
 module.exports = {
-    identity: 'expenses',
-    columnName: 'expenses',
+    identity: 'incomes',
+    columnName: 'incomes',
     connection:'dev',
     attributes: {
         uuid: {
@@ -15,7 +15,7 @@ module.exports = {
         },
         category: {
             type: 'string', // This will be an enum
-            enum: ['rent', 'groceries', 'transportation', 'entertainment', 'health', 'bills', 'other'],
+            enum: ['wage', 'bonus', 'miscellaneous'],
             required: true
         },
         description: {
