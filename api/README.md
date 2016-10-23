@@ -8,17 +8,22 @@ Folder structure based on the boilerplate https://github.com/devinivy/boilerplat
 1. Clone repo
 2. Run `npm install`
 3. Run `npm start`
-4. API is now running at `http://localhost:3000`.
+4. API is now running at `http://localhost:3001`.
 
 ## TODO
 - Integrate application logic (attributes and relations structure for all needed models).
-    - Add incomes
-    - Add fixed incomes
-    - Add fixed expenses
-    - Add expenses categories
-    - Add incomes categories
+    - ~~Add incomes~~
+    - ~~Add expenses~~
+    - ~~Add incomes categories~~
+    - ~~Add expenses categories~~
+    - Add value field (duh)
+    - Add date of the payment/income
+    - Add user overview
 - Implement access management.
     - Registry and authentication with different services (local, Facebook, Google)
     - Policies
-- Integrate with remote database.
+- Persistent data storage
+    - ~~Integrate with local database for development~~
+    - Integrate with remote database for production
+    - Handle and automatize usage of development/production databases with NODE_ENV
 - Document containerization and deployment guidelines.
