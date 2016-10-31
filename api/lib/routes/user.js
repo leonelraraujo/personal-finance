@@ -1,3 +1,5 @@
+'use strict';
+
 const Joi = require('joi');
 
 module.exports = [
@@ -21,12 +23,12 @@ module.exports = [
             description: 'Information of a single user',
             validate: {
                 params: {
-                    userId : Joi.number().required().description('id of the user'),
+                    userId : Joi.number().required().description('id of the user')
                 }
             },
             handler: (request, reply) => {
                 const Users = request.collections().users;
-                reply(Users.findOne(request.params.userId).populate('expenses'));
+                reply(Users.findOne(request.params.userId).populate('expenses').populate('incomes'));
             }
         }
     },
@@ -50,5 +52,5 @@ module.exports = [
                 }));
             }
         }
-    },
+    }
 ];

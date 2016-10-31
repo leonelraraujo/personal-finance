@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     identity: 'users',
     columnName: 'users',
@@ -14,6 +16,10 @@ module.exports = {
         },
         expenses: {
             collection: 'expenses',
+            via: 'user'
+        },
+        incomes: {
+            collection: 'incomes',
             via: 'user'
         }
     }

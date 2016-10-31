@@ -27,3 +27,6 @@ Folder structure based on the boilerplate https://github.com/devinivy/boilerplat
     - Integrate with remote database for production
     - Handle and automatize usage of development/production databases with NODE_ENV
 - Document containerization and deployment guidelines.
+
+# Issues
+- Api prefix

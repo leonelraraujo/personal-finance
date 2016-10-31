@@ -21,11 +21,11 @@ module.exports = {
                 adapter: 'disk'
             },
             dev: {
-                adapter: "postgres",
-                host: "localhost",
-                user: "postgres",
-                password: "localpw",
-                database: "personal_finance"
+                adapter: 'postgres',
+                host: 'localhost',
+                user: 'postgres',
+                password: 'localpw',
+                database: 'personal_finance'
             }
         },
         adapters: {
