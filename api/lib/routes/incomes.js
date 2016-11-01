@@ -1,7 +1,7 @@
 'use strict';
 
 const Joi = require('joi');
-const incomesSchema =  require('../models/incomes');
+const IncomesSchema =  require('../models/incomes');
 
 module.exports = [
     {
@@ -41,7 +41,7 @@ module.exports = [
             description: 'Create new income',
             validate: {
                 payload: {
-                    category: Joi.string().valid(incomesSchema.attributes.category.enum).required().description('category of the income'),
+                    category: Joi.string().valid(IncomesSchema.attributes.category.enum).required().description('category of the income'),
                     description: Joi.string().min(3).max(50).required().description('description of the income'),
                     date: Joi.date().description('date of the income transaction'),
                     value: Joi.number().min(0).required().description('income value'),
@@ -71,7 +71,7 @@ module.exports = [
                     incomeUuid : Joi.string().guid({ version: ['uuidv4'] }).required().description('uuid of the income')
                 },
                 payload: {
-                    category: Joi.string().valid(incomesSchema.attributes.category.enum).required().description('category of the income'),
+                    category: Joi.string().valid(IncomesSchema.attributes.category.enum).required().description('category of the income'),
                     description: Joi.string().min(3).max(50).required().description('description of the income'),
                     date: Joi.date().description('date of the income transaction'),
                     value: Joi.number().min(0).required().description('income value'),

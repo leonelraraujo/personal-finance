@@ -1,7 +1,7 @@
 'use strict';
 
 const Joi = require('joi');
-const expensesSchema =  require('../models/expenses');
+const ExpensesSchema =  require('../models/expenses');
 
 module.exports = [
     {
@@ -11,6 +11,7 @@ module.exports = [
             tags: ['api'],
             description: 'List all expenses',
             handler: (request, reply) => {
+
                 const Expenses = request.collections().expenses;
                 reply(Expenses.find());
             }
@@ -41,7 +42,7 @@ module.exports = [
             description: 'Create new expense',
             validate: {
                 payload: {
-                    category: Joi.string().valid(expensesSchema.attributes.category.enum).required().description('category of the expense'),
+                    category: Joi.string().valid(ExpensesSchema.attributes.category.enum).required().description('category of the expense'),
                     description: Joi.string().min(3).max(50).required().description('description of the expense'),
                     date: Joi.date().description('date of the expense transaction'),
                     value: Joi.number().min(0).required().description('income value'),
@@ -71,7 +72,7 @@ module.exports = [
                     expenseUuid : Joi.string().guid({ version: ['uuidv4'] }).required().description('uuid of the expense')
                 },
                 payload: {
-                    category: Joi.string().valid(expensesSchema.attributes.category.enum).required().description('category of the expense'),
+                    category: Joi.string().valid(ExpensesSchema.attributes.category.enum).required().description('category of the expense'),
                     description: Joi.string().min(3).max(50).required().description('description of the expense'),
                     date: Joi.date().description('date of the expense transaction'),
                     value: Joi.number().min(0).required().description('income value'),
@@ -91,5 +92,4 @@ module.exports = [
             }
         }
     }
-
 ];

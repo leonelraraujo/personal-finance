@@ -1,6 +1,6 @@
 'use strict';
 
-const uuid = require('node-uuid');
+const Uuid = require('node-uuid');
 
 module.exports = {
     identity: 'incomes',
@@ -10,7 +10,7 @@ module.exports = {
         uuid: {
             type: 'string',
             primaryKey: true,
-            defaultsTo: () => uuid.v4(),
+            defaultsTo: () => Uuid.v4(),
             unique: true, // Should this be kept? test validation time with/without
             index: true,
             uuidv4: true // TODO: Read the docs to actually know what this does

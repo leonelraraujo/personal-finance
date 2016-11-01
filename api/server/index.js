@@ -31,7 +31,7 @@ Glue.compose(Manifest, { relativeTo: __dirname }, (err, server) => {
         });
 
         // TODO: consider a logger plugin like "good"
-        server.on('response', function (request) {
+        server.on('response', (request) => {
             console.log(new Date().toLocaleTimeString() +
                 ': ' + request.method.toUpperCase() +
                 ' ' + request.url.path +

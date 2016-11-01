@@ -14,7 +14,8 @@ const describe = lab.describe;
 const it = lab.it;
 const expect = Code.expect;
 
-describe('Boilerplate API server', () => {
+
+describe('Personal Finance', () => {
 
     let server;
 
@@ -32,9 +33,19 @@ describe('Boilerplate API server', () => {
         });
     });
 
-    it('has the main API plugin registered.', (done) => {
+    it('initializes.', (done) => {
+        expect(server).to.exist();
 
-        expect(server.registrations['boilerplate-api']).to.exist();
+        // isInitialized() can be used to check the server's init state
+        expect(LabbableServer.isInitialized()).to.equal(true);
+
+        // Incomes.run(server);
+        done();
+    });
+
+    it('dogwater plugin registered.', (done) => {
+
+        expect(server.registrations.dogwater).to.exist();
         done();
     });
 });
